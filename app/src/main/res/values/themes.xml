@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.BudgetEase" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Base application theme. -->
+    <style name="Theme.BudgetEase" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/primary</item>
+        
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <!-- Text appearances -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.BudgetEase.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.BudgetEase.Headline2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.BudgetEase.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.BudgetEase.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.BudgetEase.Button</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        
+        <!-- Button styles -->
+        <item name="materialButtonStyle">@style/Widget.BudgetEase.Button</item>
+        
+        <!-- Bottom Navigation styles -->
+        <item name="bottomNavigationStyle">@style/Widget.BudgetEase.BottomNavigationView</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_background</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item> <!-- Optional: Duration in ms -->
+        <item name="postSplashScreenTheme">@style/Theme.BudgetEase</item> <!-- Theme to apply after splash -->
+    </style>
+
+    <style name="Theme.BudgetEase.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="Theme.BudgetEase.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.BudgetEase.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Widget.BudgetEase.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/TextAppearance.BudgetEase.Button</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="elevation">4dp</item>
+    </style>
+
+    <style name="Widget.BudgetEase.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="elevation">8dp</item>
+        <item name="itemIconTint">@color/bottom_nav_colors</item>
+        <item name="itemTextColor">@color/bottom_nav_colors</item>
+        <item name="itemRippleColor">@color/primary</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="android:background">@color/surface</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BudgetEase.Body2</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.BudgetEase.Body2</item>
+    </style>
+
 </resources>
