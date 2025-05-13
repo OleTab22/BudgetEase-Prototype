@@ -1,6 +1,5 @@
 ﻿# BudgetEase - Personal Finance Manager
 
-![BudgetEase App Icon Placeholder](app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png)
 
 BudgetEase is a comprehensive Android application designed to empower users to manage their personal finances effectively. It provides tools for tracking income and expenses, setting budget goals, managing categories, and visualizing spending habits.
 
