@@ -1,0 +1,11 @@
+<!-- salary icon (e.g., a money bag) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0"
+    android:tint="?attr/colorControlNormal">
+  <path
+      android:fillColor="@android:color/white"
+      android:pathData="M15,4C15,4 14,3 12,3C10,3 9,4 9,4C9,4 7,4 7,6C7,8 9,8 9,8L9,10.1C7.14,10.56 6,11.53 6,13.02C6,14.27 6.68,15.14 7.81,15.63L7.27,20L16.73,20L16.19,15.63C17.32,15.14 18,14.27 18,13.02C18,11.53 16.86,10.56 15,10.1L15,8C15,8 17,8 17,6C17,4 15,4 15,4ZM12,5C12.55,5 13,5.45 13,6C13,6.55 12.55,7 12,7C11.45,7 11,6.55 11,6C11,5.45 11.45,5 12,5ZM9,12C9,11.45 9.45,11 10,11H14C14.55,11 15,11.45 15,12C15,12.55 14.55,13 14,13H10C9.45,13 9,12.55 9,12Z"/>
+</vector> 

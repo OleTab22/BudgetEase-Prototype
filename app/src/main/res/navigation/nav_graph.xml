@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.budgetease.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_addTransaction"
+            app:destination="@id/addTransactionFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_statistics"
+            app:destination="@id/navigation_stats" />
+        <action
+            android:id="@+id/action_dashboard_to_wallet"
+            app:destination="@id/navigation_wallet" />
+        <action
+            android:id="@+id/action_dashboard_to_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_dashboard_to_allTransactionsFragment"
+            app:destination="@id/allTransactionsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_budget"
+            app:destination="@id/navigation_budget" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_budget"
+        android:name="com.budgetease.ui.budget.BudgetFragment"
+        android:label="@string/title_budget"
+        tools:layout="@layout/fragment_budget" />
+
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.budgetease.ui.transaction.AddTransactionFragment"
+        android:label="@string/title_add_transaction" >
+        <action
+            android:id="@+id/action_addTransactionFragment_to_categoryManagementFragment"
+            app:destination="@id/categoryManagementFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.budgetease.ui.stats.StatisticsFragment"
+        android:label="@string/title_statistics" />
+
+    <fragment
+        android:id="@+id/navigation_wallet"
+        android:name="com.budgetease.ui.wallet.WalletFragment"
+        android:label="@string/title_wallet">
+        <action
+            android:id="@+id/action_wallet_to_allTransactionsFragment"
+            app:destination="@id/allTransactionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.budgetease.ui.profile.ProfileFragment"
+        android:label="@string/title_profile">
+        <action
+            android:id="@+id/action_profile_to_categoryManagement"
+            app:destination="@id/categoryManagementFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryManagementFragment"
+        android:name="com.budgetease.ui.category.CategoryManagementFragment"
+        android:label="@string/title_category_management" />
+
+    <fragment
+        android:id="@+id/allTransactionsFragment"
+        android:name="com.budgetease.ui.transaction.AllTransactionsFragment"
+        android:label="@string/title_all_transactions"
+        tools:layout="@layout/fragment_all_transactions" />
+
+</navigation> 

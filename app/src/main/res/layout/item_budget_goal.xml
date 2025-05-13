@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_small"
+    android:layout_marginTop="@dimen/spacing_extra_small"
+    android:layout_marginEnd="@dimen/spacing_small"
+    android:layout_marginBottom="@dimen/spacing_extra_small"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium">
+
+        <ImageView
+            android:id="@+id/categoryIcon"
+            android:layout_width="@dimen/spacing_extra_large"
+            android:layout_height="@dimen/spacing_extra_large"
+            tools:srcCompat="@drawable/ic_food"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Category Icon" />
+
+        <TextView
+            android:id="@+id/categoryNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            tools:text="Groceries"
+            app:layout_constraintStart_toEndOf="@id/categoryIcon"
+            app:layout_constraintTop_toTopOf="@id/categoryIcon"
+            app:layout_constraintEnd_toStartOf="@id/editGoalButton" />
+
+        <TextView
+            android:id="@+id/goalPeriodText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceCaption"
+            tools:text="October 2023"
+            app:layout_constraintStart_toStartOf="@id/categoryNameText"
+            app:layout_constraintTop_toBottomOf="@id/categoryNameText"
+            app:layout_constraintEnd_toEndOf="@id/categoryNameText"/>
+
+        <TextView
+            android:id="@+id/budgetAmountText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:textAppearance="?attr/textAppearanceBody1"
+            tools:text="Budget: R 1,000.00 - R 1,500.00"
+            app:layout_constraintStart_toStartOf="@id/goalPeriodText"
+            app:layout_constraintTop_toBottomOf="@id/goalPeriodText"
+            app:layout_constraintEnd_toEndOf="@id/goalPeriodText"/>
+
+        <ProgressBar
+            android:id="@+id/spendingProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:max="100"
+            tools:progress="60"
+            app:layout_constraintStart_toStartOf="@id/budgetAmountText"
+            app:layout_constraintTop_toBottomOf="@id/budgetAmountText"
+            app:layout_constraintEnd_toEndOf="@id/budgetAmountText" />
+
+        <TextView
+            android:id="@+id/spendingProgressText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody2"
+            tools:text="Spent: R 900.00 of R 1,500.00"
+            android:layout_marginTop="@dimen/spacing_extra_small"
+            app:layout_constraintStart_toStartOf="@id/spendingProgressBar"
+            app:layout_constraintTop_toBottomOf="@id/spendingProgressBar"
+            app:layout_constraintEnd_toEndOf="@id/spendingProgressBar" />
+
+        <ImageButton
+            android:id="@+id/editGoalButton"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Edit Budget Goal"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@id/deleteGoalButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/deleteGoalButton"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Delete Budget Goal"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView> 

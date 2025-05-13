@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="chip_min_height">40dp</dimen>
+    <dimen name="chip_corner_radius">8dp</dimen>
+
+    <!-- Standard Spacing -->
+    <dimen name="spacing_extra_small">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_extra_large">32dp</dimen>
+
+    <!-- Standard Padding -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+
+    <!-- Component Specific -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="button_corner_radius">16dp</dimen>
+    <dimen name="button_padding_vertical">12dp</dimen>
+    <dimen name="bottom_nav_elevation">8dp</dimen>
+
+    <!-- Example Text Sizes (Consider defining more in type.xml or styles if preferred) -->
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_body_2">14sp</dimen>
+    <dimen name="text_size_body_1">16sp</dimen>
+    <dimen name="text_size_subtitle_1">16sp</dimen>
+    <dimen name="text_size_button">14sp</dimen>
+    <dimen name="text_size_headline_6">20sp</dimen>
+    <dimen name="text_size_headline_5">24sp</dimen>
+    <dimen name="text_size_headline_4">34sp</dimen>
+
+</resources> 

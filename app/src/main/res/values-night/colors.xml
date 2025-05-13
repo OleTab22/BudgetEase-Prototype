@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Override bottom nav colors for dark theme -->
+    <color name="bottom_nav_item_inactive">#B0BEC5</color> <!-- Light Grey -->
+    <color name="bottom_nav_item_active">@color/primary_light</color> <!-- Use the existing light primary color -->
+</resources> 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.BudgetEase" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/button_primary_dark</item>
+        <item name="colorPrimaryContainer">@color/button_primary_dark</item>
+        <item name="colorOnPrimary">@color/button_text_dark</item>
+        <item name="colorSecondary">@color/button_secondary_dark</item>
+        <item name="colorSecondaryContainer">@color/button_secondary_dark</item>
+        <item name="colorOnSecondary">@color/button_text_dark</item>
+        <item name="android:colorBackground">@color/background_color_dark</item>
+        <item name="colorOnBackground">@color/text_color_primary_dark</item>
+        <item name="colorSurface">@color/background_color_dark</item>
+        <item name="colorOnSurface">@color/text_color_primary_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+    </style>
+
+    <style name="Theme.BudgetEase.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+</resources> 

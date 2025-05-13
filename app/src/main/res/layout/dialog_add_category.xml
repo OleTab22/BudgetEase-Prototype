@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/padding_large"
+    android:paddingTop="@dimen/spacing_medium"
+    android:paddingBottom="@dimen/padding_large">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/categoryNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Category Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/categoryNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category Icon"
+        android:textAppearance="?attr/textAppearanceLabelLarge"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginBottom="@dimen/spacing_extra_small"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/spacing_small">
+
+        <ImageView
+            android:id="@+id/categoryIconPreview"
+            android:layout_width="@dimen/chip_min_height"
+            android:layout_height="@dimen/chip_min_height"
+            android:src="@drawable/ic_default_category"
+            android:contentDescription="Selected category icon"
+            android:background="@drawable/preview_background_shape"
+            android:padding="@dimen/spacing_extra_small"
+            android:layout_marginEnd="@dimen/spacing_medium"/>
+
+        <Button
+            android:id="@+id/chooseIconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            app:icon="@drawable/ic_category" 
+            android:text="Choose Icon"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category Color"
+        android:textAppearance="?attr/textAppearanceLabelLarge"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginBottom="@dimen/spacing_extra_small"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/spacing_small">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/categoryColorCardView"
+            android:layout_width="@dimen/chip_min_height"
+            android:layout_height="@dimen/chip_min_height"
+            app:cardCornerRadius="@dimen/spacing_medium"
+            app:cardElevation="@dimen/card_elevation"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="@dimen/spacing_medium">
+
+            <View
+                android:id="@+id/categoryColorPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#104D4F"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/chooseColorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            app:icon="@drawable/ic_color_picker"
+            android:text="Choose Color"/>
+    </LinearLayout>
+
+    <!-- For a real color picker, you'd integrate a library or custom view -->
+    <!-- For icon picker, a RecyclerView with icons or a dropdown -->
+
+</LinearLayout>

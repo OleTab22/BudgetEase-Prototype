@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/accounts"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                 />
+
+            <ImageButton
+                android:id="@+id/addAccountButton"
+                android:layout_width="@dimen/spacing_extra_large"
+                android:layout_height="@dimen/spacing_extra_large"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/add_account"
+                android:src="@drawable/ic_add"
+                app:tint="?attr/colorPrimary" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/accountsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_account" />
+            <LinearLayout
+                android:id="@+id/emptyAccountsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_extra_large"
+                    android:layout_height="@dimen/spacing_extra_large"
+                    android:src="@drawable/ic_account_balance_wallet" 
+                    app:tint="@color/text_secondary"
+                    android:layout_marginBottom="@dimen/spacing_small"/>
+
+                <TextView
+                    android:id="@+id/emptyAccountsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No accounts yet. Tap + to add." />
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/accountsProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recent_transactions"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                 />
+
+            <TextView
+                android:id="@+id/seeAllTransactions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/padding_small"
+                android:text="@string/see_all"
+                android:textColor="?attr/colorPrimary" />
+        </LinearLayout>
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/transactionsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_transaction"/>
+            <LinearLayout
+                android:id="@+id/emptyTransactionsContainerWallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_extra_large"
+                    android:layout_height="@dimen/spacing_extra_large"
+                    android:src="@drawable/ic_empty_state" 
+                    app:tint="@color/text_secondary"
+                    android:layout_marginBottom="@dimen/spacing_small"/>
+
+                <TextView
+                    android:id="@+id/emptyTransactionsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No recent transactions." />
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/transactionsProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView> 
