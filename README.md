@@ -180,26 +180,3 @@ A typical workflow file (e.g., `.github/workflows/android_ci.yml`) might include
 ## Link to video
 https://youtu.be/bE8zsW_5qEY?si=LTa91WjOZUNjy9iS
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to BudgetEase, please follow these steps:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-amazing-feature`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add some amazing feature'`).
-5.  Push to the branch (`git push origin feature/your-amazing-feature`).
-6.  Open a Pull Request.
-
-Please ensure your code adheres to the existing coding style and includes tests where appropriate.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.md) - see the `LICENSE.md` file for details (if you choose to add one).
-
-*(User: You'll need to create a `LICENSE.md` file if you want to include a specific license. MIT is a common choice for open-source projects.)*
-
----
-
-Readme generated with assistance from an AI Pair Programmer.
-User: Please customize image paths, GitHub URLs, and add a `LICENSE.md` file if desired.
