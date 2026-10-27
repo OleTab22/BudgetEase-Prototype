@@ -65,7 +65,9 @@ On Windows, use `gradlew.bat`. The app targets Android SDK 35 and JVM 11 bytecod
 
 ## Testing and current status
 
-The repository includes JUnit/MockK dependencies, test sources, and a GitHub Actions workflow intended to build and run unit tests on pushes to `main`. These are implementation resources—not an assertion that the current project has passing CI or complete test coverage.
+The repository includes JUnit/MockK dependencies and test sources. A [GitHub Actions run on 27 October 2026](https://github.com/OleTab22/BudgetEase-Prototype/actions/runs/40485414281) successfully built the debug APK and completed the JVM unit-test task using JDK 17. The updated workflow is proposed in [PR #2](https://github.com/OleTab22/BudgetEase-Prototype/pull/2).
+
+This confirms the build and test task complete in CI; it does not establish complete feature coverage or end-to-end correctness.
 
 The [video walkthrough](https://youtu.be/bE8zsW_5qEY) is the best starting point for seeing the interface. Planned enhancements include fuller reporting, more complete editing flows, and further end-to-end verification.
 
